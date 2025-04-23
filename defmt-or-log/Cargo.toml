@@ -13,16 +13,9 @@ categories = ["embedded", "no-std"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-defmt = { version = "0.3.10", optional = true }
-log = { version = "0.4.26", optional = true }
+defmt = "0.3.10"
+log = "0.4.26"
 defmt-or-log-macros = { version = "0.1.0", path = "../defmt-or-log-macros" }
 
 [features]
-# Choose at most one of the following two features
-log = ["dep:log"]
-defmt = ["dep:defmt"]
-
-# If enabled, at least one of the above features must be enabled
-at_least_one = []
-
-default = ["at_least_one"]
+defmt = []
